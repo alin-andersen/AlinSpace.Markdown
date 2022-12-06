@@ -1,0 +1,17 @@
+{
+  "PathToSolutionFile": "AlinSpace.Markdown.sln",
+  "PathToLocalNugetFolder": "C:\\AlinSpace\\Nuget",
+  "PathToDebugFiles": "C:\\AlinSpace\\Pdbs",
+  "BuildInDebugConfiguration": true,
+  "Author": "Alin Andersen",
+  "Copyright": "Copyright © 2022 Alin Andersen",
+  "RepositoryUrl": "https://github.com/onixion/AlinSpace.Markdown",
+  "ProjectUrl": "https://github.com/onixion/AlinSpace.Markdown",
+  "Tags": "alinspace; alin; space",
+  "Projects": [
+    {
+      "Name": "AlinSpace.Markdown",
+      "Tags": "markdown; md;"
+    }
+  ]
+}
