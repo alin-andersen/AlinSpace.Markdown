@@ -1,13 +1,13 @@
 ﻿namespace AlinSpace.Markdown
 {
-    public class Headline : IMarkdownComponent
+    public class Header : IMarkdownComponent
     {
-        public HeadlineLevel Level { get; }
+        public HeaderLevel Level { get; }
 
         public string Text { get; }
 
-        public Headline(
-            HeadlineLevel level, 
+        public Header(
+            HeaderLevel level, 
             string text)
         {
             Level = level;

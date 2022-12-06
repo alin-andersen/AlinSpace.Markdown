@@ -1,6 +1,6 @@
 ﻿namespace AlinSpace.Markdown
 {
-    public enum HeadlineLevel
+    public enum HeaderLevel
     {
         H1,
         H2,
