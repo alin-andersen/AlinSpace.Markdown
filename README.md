@@ -1,4 +1,4 @@
-<img src="https://github.com/onixion/AlinSpace.Markdown/blob/main/Assets/Icon.png" width="200" height="200">
+<img src="https://github.com/alin-andersen/AlinSpace.Markdown/blob/main/Assets/Icon.png" width="200" height="200">
 
 # AlinSpace.Markdown
 [![NuGet version (AlinSpace.Markdown)](https://img.shields.io/nuget/v/AlinSpace.Markdown.svg?style=flat-square)](https://www.nuget.org/packages/AlinSpace.Markdown/)
