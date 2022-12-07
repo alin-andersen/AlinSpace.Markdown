@@ -22,4 +22,12 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AlinSpace.Markdown\AlinSpace.Markdown.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Paragraphs\" />
+  </ItemGroup>
+
 </Project>

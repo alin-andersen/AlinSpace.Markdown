@@ -20,7 +20,7 @@
             }
 
             line = lines[index];
-            index =+ 1;
+            index += 1;
             return true;
         }
 
