@@ -4,14 +4,14 @@
     {
         public string Language { get; }
 
-        public string Text { get; }
+        public string Code { get; }
 
         public Codeblock(
             string language, 
-            string text)
+            string code)
         {
             Language = language;
-            Text = text;
+            Code = code;
         }
     }
 }

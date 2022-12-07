@@ -90,14 +90,8 @@
 
         private static bool HandleHorizontalRule(List<IMarkdownComponent> components, string line)
         {
-            if (!(
-                line.StartsWith("- - -") ||
-                line.StartsWith("* * *") ||
-                line.StartsWith("***") ||
-                line.StartsWith("*****")))
-            {
+            if (!line.StartsWith("-"))
                 return false;
-            }
 
             components.Add(new Separator());
 
@@ -113,7 +107,12 @@
 
             var languageName = line.Substring(prefix.Length);
 
+            if (string.IsNullOrWhiteSpace(languageName))
+                languageName = null;
+
             var codeLines = parser.TakeNextLinesUntil(line => line.StartsWith(prefix));
+
+            parser.TakeNextLine();
 
             components.Add(new Codeblock(languageName, codeLines.ToMultiLineString()));
 
