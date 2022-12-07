@@ -1,0 +1,31 @@
+name: .NET
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  AlinSpace_Jobs:
+    name: AlinSpace.Markdown
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 6.0.x
+    - name: Restore
+      run: dotnet restore AlinSpace.Markdown/AlinSpace.Markdown.csproj
+    - name: Building
+      run: dotnet build AlinSpace.Markdown/AlinSpace.Markdown.csproj --no-restore -c Release
+    - name: Restore
+      run: dotnet restore AlinSpace.Markdown.UnitTests/AlinSpace.Markdown.UnitTests.csproj
+    - name: Tests
+      run: dotnet test AlinSpace.Markdown.UnitTests/AlinSpace.Markdown.UnitTests.csproj
+    - name: Pack
+      run: dotnet pack AlinSpace.Markdown/AlinSpace.Markdown.csproj -c Release -o . 
+    - name: Publish
+      run: dotnet nuget push AlinSpace.Markdown.*.nupkg -k ${{ secrets.NUGET_KEY }} -s https://api.nuget.org/v3/index.json --skip-duplicate
