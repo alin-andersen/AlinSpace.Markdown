@@ -114,7 +114,7 @@
 
             parser.TakeNextLine();
 
-            components.Add(new Codeblock(languageName, codeLines.ToMultiLineString()));
+            components.Add(new CodeBlock(languageName, codeLines.ToMultiLineString()));
 
             return true;
         }

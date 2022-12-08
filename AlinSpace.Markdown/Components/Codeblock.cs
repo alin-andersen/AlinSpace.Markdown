@@ -1,12 +1,12 @@
 ﻿namespace AlinSpace.Markdown
 {
-    public class Codeblock : IMarkdownComponent
+    public class CodeBlock : IMarkdownComponent
     {
         public string Language { get; }
 
         public string Code { get; }
 
-        public Codeblock(
+        public CodeBlock(
             string language, 
             string code)
         {

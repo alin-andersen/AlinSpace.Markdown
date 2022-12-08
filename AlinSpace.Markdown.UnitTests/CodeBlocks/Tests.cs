@@ -16,9 +16,9 @@ namespace AlinSpace.Markdown.UnitTests.CodeBlocks
             var components = Parser.FromText(markdown);
 
             components.Count().Should().Be(1);
-            components.First().GetType().Should().Be(typeof(Codeblock));
-            components.Cast<Codeblock>().First().Language.Should().BeNull();
-            components.Cast<Codeblock>().First().Code.Should().Be(@"1
+            components.First().GetType().Should().Be(typeof(CodeBlock));
+            components.Cast<CodeBlock>().First().Language.Should().BeNull();
+            components.Cast<CodeBlock>().First().Code.Should().Be(@"1
 2
 3");
         }
@@ -35,9 +35,9 @@ namespace AlinSpace.Markdown.UnitTests.CodeBlocks
             var components = Parser.FromText(markdown);
 
             components.Count().Should().Be(1);
-            components.First().GetType().Should().Be(typeof(Codeblock));
-            components.Cast<Codeblock>().First().Language.Should().Be("csharp");
-            components.Cast<Codeblock>().First().Code.Should().Be(@"1
+            components.First().GetType().Should().Be(typeof(CodeBlock));
+            components.Cast<CodeBlock>().First().Language.Should().Be("csharp");
+            components.Cast<CodeBlock>().First().Code.Should().Be(@"1
 2
 3");
         }
